@@ -5,9 +5,9 @@ const createLender= async (req, res) => {
         const { name, contactNumber, address }= req.body;
         
         const newLender= new Lender({
-            name: name,
-            contactNumber: contactNumber,
-            address: address
+            name,
+            contactNumber,
+            address
         });
 
         await newLender.save();
